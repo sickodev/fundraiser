@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Rubik } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
-import Navbar from "@/components/navbar";
 
-const fontSans = Rubik({ subsets: ["latin"] });
+const fontSans = Open_Sans({
+    subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
     title: "Helping",
