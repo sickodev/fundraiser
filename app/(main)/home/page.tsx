@@ -1,6 +1,6 @@
-import { ModeToggle } from "@/components/mode-toggle";
-import Image from "next/image";
+import { getProfile } from "@/lib/get-profile";
 
-export default function Home() {
+export default async function HomePage() {
+    const profile = await getProfile();
     return <main>Hello</main>;
 }

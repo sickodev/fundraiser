@@ -3,6 +3,15 @@ import React from "react";
 import { ModeToggle } from "./mode-toggle";
 import SearchBar from "./search-bar";
 import PostCause from "./post-cause";
+import { UserButton } from "@clerk/nextjs";
+import { GearIcon } from "@radix-ui/react-icons";
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "./ui/tooltip";
+import SettingsButton from "./settings-button";
 
 const Navbar = () => {
     return (
@@ -14,9 +23,10 @@ const Navbar = () => {
                 <SearchBar />
             </div>
             <div className='flex items-center justify-between space-x-1'>
-                <ModeToggle />
-                {/* User Button */}
+                <UserButton />
+                <SettingsButton />
                 <PostCause />
+                <ModeToggle />
             </div>
         </nav>
     );
